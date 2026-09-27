@@ -1,0 +1,6 @@
+{
+  "name": "Weather Wander",
+  "description": "A cute whimsical world-exploration experience to discover the world's weather and curated activities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

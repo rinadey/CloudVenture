@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #3b3346;
+    background-color: #fdfbf7;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, .font-whimsical {
+    font-family: 'Fredoka', 'Quicksand', cursive, sans-serif;
+  }
+}
+
+/* Custom whimsical animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+@keyframes floatAcross {
+  0% {
+    transform: translateX(-15%);
+  }
+  100% {
+    transform: translateX(115%);
+  }
+}
+
+@keyframes gentlePulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes flightDash {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+@keyframes gentleRain {
+  0% {
+    transform: translateY(-20px) translateX(-5px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(180px) translateX(15px);
+    opacity: 0;
+  }
+}
+
+@keyframes gentleSnow {
+  0% {
+    transform: translateY(-20px) translateX(-10px) rotate(0deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(200px) translateX(20px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes sunRaysRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatSlow 7s ease-in-out 2s infinite;
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.animate-sun-rotate {
+  animation: sunRaysRotate 35s linear infinite;
+}
+
+/* Custom scrollbar for whimsical aesthetic */
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1ecf6;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d8cde4;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c3b5d3;
+}
